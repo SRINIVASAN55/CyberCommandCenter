@@ -1,221 +1,180 @@
 <div align="center">
 
 ```
- ██████╗██╗   ██╗██████╗ ███████╗██████╗
-██╔════╝╚██╗ ██╔╝██╔══██╗██╔════╝██╔══██╗
-██║      ╚████╔╝ ██████╔╝█████╗  ██████╔╝
-██║       ╚██╔╝  ██╔══██╗██╔══╝  ██╔══██╗
-╚██████╗   ██║   ██████╔╝███████╗██║  ██║
- ╚═════╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═╝
- ██████╗ ██████╗ ███╗   ███╗███╗   ███╗ █████╗ ███╗   ██╗██████╗
-██╔════╝██╔═══██╗████╗ ████║████╗ ████║██╔══██╗████╗  ██║██╔══██╗
-██║     ██║   ██║██╔████╔██║██╔████╔██║███████║██╔██╗ ██║██║  ██║
-██║     ██║   ██║██║╚██╔╝██║██║╚██╔╝██║██╔══██║██║╚██╗██║██║  ██║
-╚██████╗╚██████╔╝██║ ╚═╝ ██║██║ ╚═╝ ██║██║  ██║██║ ╚████║██████╔╝
- ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝
- ██████╗███████╗███╗   ██╗████████╗███████╗██████╗
-██╔════╝██╔════╝████╗  ██║╚══██╔══╝██╔════╝██╔══██╗
-██║     █████╗  ██╔██╗ ██║   ██║   █████╗  ██████╔╝
-██║     ██╔══╝  ██║╚██╗██║   ██║   ██╔══╝  ██╔══██╗
-╚██████╗███████╗██║ ╚████║   ██║   ███████╗██║  ██║
- ╚═════╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═╝  ╚═╝
+ ██████╗██╗   ██╗██████╗ ███████╗██████╗      ██████╗ ██████╗
+██╔════╝╚██╗ ██╔╝██╔══██╗██╔════╝██╔══██╗    ██╔════╝██╔════╝
+██║      ╚████╔╝ ██████╔╝█████╗  ██████╔╝    ██║     ██║
+██║       ╚██╔╝  ██╔══██╗██╔══╝  ██╔══██╗    ██║     ██║
+╚██████╗   ██║   ██████╔╝███████╗██║  ██║    ╚██████╗╚██████╗
+ ╚═════╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═╝     ╚═════╝ ╚═════╝
 ```
 
-### **AI-Powered SOC Platform — Real Threat Intel · ML Detection · APT Simulation · Honeypot**
+# 🛡️ CyberCommandCenter
+
+**AI-Powered Security Operations Platform**
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python)](https://python.org)
-[![MITRE ATT&CK](https://img.shields.io/badge/MITRE-ATT%26CK_v14-red?style=for-the-badge)](https://attack.mitre.org)
+[![MITRE ATT&CK](https://img.shields.io/badge/MITRE-ATT%26CK%20v14-red?style=for-the-badge)](https://attack.mitre.org)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![SOC](https://img.shields.io/badge/Blue_Team-SOC_Ready-cyan?style=for-the-badge)]()
+[![Stars](https://img.shields.io/github/stars/SRINIVASAN55/CyberCommandCenter?style=for-the-badge&color=yellow)](https://github.com/SRINIVASAN55/CyberCommandCenter)
 
-*Built by **S. Srinivasan** — SOC & NOC Analyst, Chennai*
+*A single-file, zero-dependency SOC platform for threat hunting, anomaly detection, and APT simulation*
 
 </div>
 
 ---
 
-## ⚡ What Is This?
+## 🚀 What is CyberCommandCenter?
 
-**CyberCommandCenter** is a single-file, fully self-contained SOC platform that runs in your terminal. No servers. No cloud. No vendor lock-in. Just Python and raw security engineering.
+CyberCommandCenter is a **production-grade Security Operations Center (SOC) platform** built entirely in Python. It combines real-time threat intelligence, ML-powered anomaly detection, MITRE ATT&CK simulation, and an interactive honeypot — all in a single file with no mandatory dependencies.
 
-It combines six production-grade modules that would normally cost thousands in commercial SIEM/SOAR licenses:
-
-| Module | What It Does |
-|--------|-------------|
-| 🖥 **Live SOC Dashboard** | Real-time alert feed with Rich terminal UI — severity, MITRE tactics, source IPs, block status |
-| 🎯 **APT Simulator** | Generates realistic multi-stage attack chains for 6 real APT groups mapped to MITRE ATT&CK v14 |
-| 🤖 **ML Anomaly Detector** | Isolation Forest (sklearn) or Z-score statistical detection on raw log streams |
-| 🌐 **Threat Intel Engine** | IP reputation lookup via AbuseIPDB API + built-in IOC database fallback |
-| 🍯 **Honeypot** | Multi-port TCP honeypot simulating SSH/HTTP/FTP with full attacker session logging |
-| 📋 **IOC Bulk Scanner** | Scan IPs, domains, and file hashes against threat intelligence in bulk |
+Built for: **Security Analysts · Penetration Testers · SOC Teams · Blue Team Defenders**
 
 ---
 
-## 🚀 Quick Start
+## ✨ Features
+
+| Module | Description |
+|--------|-------------|
+| 🔍 **Threat Intel Engine** | Real-time IP reputation via AbuseIPDB, local IOC database (IPs, domains, hashes, user-agents), bulk lookup with caching |
+| 🤖 **ML Anomaly Detector** | Isolation Forest (sklearn) with Z-score fallback, 8-feature log vector, auto-baseline training, explainable alerts |
+| 🎯 **APT Simulator** | 6 APT groups, 11 MITRE ATT&CK v14 tactics, full kill-chain simulation, HTML + JSON reports |
+| 🍯 **TCP Honeypot** | Multi-service simulation (SSH/HTTP/FTP), attacker fingerprinting, JSONL session logging |
+| 📊 **SOC Dashboard** | Rich terminal Live layout, real-time alerts, color-coded severity, analyst workflow |
+| 🔎 **IOC Scanner** | Bulk IOC scanning across IPs, domains, file hashes, user-agents |
+
+---
+
+## ⚡ Quick Start
 
 ```bash
-# Clone
-git clone https://github.com/SRINIVASAN55/CyberCommandCenter
+# Clone the repo
+git clone https://github.com/SRINIVASAN55/CyberCommandCenter.git
 cd CyberCommandCenter
 
-# Install optional deps for full features
-pip install rich scikit-learn numpy
-
-# Run full demo (no API keys needed)
+# Run with no dependencies (stdlib only)
 python cyber_command_center.py --demo
 
-# Launch live dashboard
+# Install optional packages for full features
+pip install -r requirements.txt
+
+# Launch live SOC dashboard
 python cyber_command_center.py --dashboard
 
-# Simulate APT29 attack
-python cyber_command_center.py --simulate-apt --apt-group "APT29 (Cozy Bear)" --target MyOrg
+# Simulate APT attack (e.g. APT29 Cozy Bear)
+python cyber_command_center.py --simulate-apt --apt-group apt29
+
+# Start honeypot on ports 22, 80, 21
+python cyber_command_center.py --honeypot
 
 # Analyze a log file for anomalies
 python cyber_command_center.py --analyze /var/log/auth.log
-
-# Start honeypot
-sudo python cyber_command_center.py --honeypot
-
-# Interactive menu
-python cyber_command_center.py
 ```
-
-> **Zero dependencies for core features** — stdlib only. `rich` and `scikit-learn` are optional enhancements.
 
 ---
 
-## 🎯 APT Simulation — MITRE ATT&CK Chains
+## 🎯 APT Groups Supported
 
-Simulates full kill-chain attacks for real threat actor groups:
-
-```
-[SIM] APT29 (Cozy Bear) → DemoCorpInc
-
-  [10:00:01] [CRITICAL]  Initial Access        | Phishing (T1566)
-  [10:23:45] [HIGH    ]  Execution             | Command & Scripting Interpreter (T1059)
-  [11:02:11] [HIGH    ]  Persistence           | Boot/Logon Autostart (T1547)
-  [11:45:00] [CRITICAL]  Defense Evasion       | Indicator Removal (T1070)
-  [12:10:33] [HIGH    ]  Credential Access     | OS Credential Dumping (T1003)
-  [13:22:00] [CRITICAL]  Collection            | Data from Local System (T1005)
-  [14:05:17] [CRITICAL]  Exfiltration          | Exfiltration Over C2 Channel (T1041)
-
-[REPORT] HTML report saved → incidents/INC-1234567890_report.html
-[REPORT] JSON report saved → incidents/INC-1234567890_report.json
-```
-
-**Supported APT Groups:**
-- APT29 (Cozy Bear) — Russian SVR
-- APT28 (Fancy Bear) — Russian GRU  
-- Lazarus Group — North Korean RGB
-- FIN7 — Financially motivated
-- Sandworm — Russian GRU destructive ops
-- Carbanak — Banking sector attacks
+| Group | Alias | Nation | Tactics |
+|-------|-------|--------|---------|
+| APT28 | Fancy Bear | Russia 🇷🇺 | Spearphishing → Credential Dump → Lateral Movement |
+| APT29 | Cozy Bear | Russia 🇷🇺 | Supply Chain → C2 → Data Exfiltration |
+| APT41 | Double Dragon | China 🇨🇳 | Watering Hole → Persistence → Espionage |
+| Lazarus | Hidden Cobra | North Korea 🇰🇵 | Ransomware → Financial Theft |
+| APT34 | OilRig | Iran 🇮🇷 | DNS Tunneling → Long-term Access |
+| Sandworm | Voodoo Bear | Russia 🇷🇺 | ICS/SCADA → Infrastructure Attacks |
 
 ---
 
-## 🤖 ML Anomaly Detection
+## 🧠 MITRE ATT&CK Coverage
 
 ```
-[ML] Isolation Forest trained on 52 baseline samples
-
-🔴 ANOMALY | score:0.847 | High authentication failure rate | Failed password for root from 185.220.101.1
-🔴 ANOMALY | score:0.791 | Unusually high port diversity    | Connection refused REJECT SRC=198.20.69.74
-🔴 ANOMALY | score:0.823 | Abnormal request frequency       | GET /etc/passwd 404 — 45.33.32.156
-🟢 NORMAL  | score:0.112 |                                  | GET /index.html 200 192.168.1.10
+Initial Access → Execution → Persistence → Privilege Escalation →
+Defense Evasion → Credential Access → Discovery → Lateral Movement →
+Collection → Command & Control → Exfiltration
 ```
 
-**Feature vector (8 dimensions):**
-- Requests/min, unique endpoints, error rate, avg payload size
-- Failed auth rate, port diversity, bytes out, time-of-day score
-
-Falls back to Z-score statistical detection if sklearn is not installed.
+All 11 tactics mapped. Each simulated attack generates technique IDs (e.g. `T1566.001`, `T1059.003`) with real-world APT attribution.
 
 ---
 
-## 🍯 Honeypot
-
-Simulates SSH (port 2222), HTTP (port 8080), and FTP (port 2121):
-
-```
-[HONEYPOT] 🍯 185.220.101.4:41223 → port 2222 (SSH) | 3 payloads
-[HONEYPOT] 🍯 45.33.32.156:55102  → port 8080 (HTTP) | 1 payloads
-[HONEYPOT] 🍯 198.20.69.74:39201  → port 2222 (SSH)  | 7 payloads
-```
-
-All sessions logged to `honeypot.jsonl` with full fingerprinting: IP, port, service, session ID, payloads, timestamp.
-
----
-
-## 📊 Incident Reports
-
-Every APT simulation auto-generates:
-
-- **HTML Report** — Professional dark-theme incident report with MITRE chain visualization, alert table, timeline, and affected IPs
-- **JSON Report** — Machine-readable full incident data for SIEM ingestion
-
----
-
-## 🗂 Project Structure
+## 📁 Project Structure
 
 ```
 CyberCommandCenter/
-├── cyber_command_center.py   # All 6 modules — single file, ~800 lines
+├── cyber_command_center.py   # Main platform (single file, ~800 lines)
 ├── requirements.txt          # Optional dependencies
 ├── config.sample.json        # API key configuration template
-├── incidents/                # Auto-created: HTML + JSON incident reports
-└── honeypot.jsonl            # Auto-created: honeypot session log
+└── README.md                 # This file
 ```
 
 ---
 
 ## 🔧 Configuration
 
-Copy `config.sample.json` to `config.json` and add your API keys for live threat intel:
-
-```json
-{
-  "abuseipdb_key":  "your_key_from_abuseipdb.com",
-  "virustotal_key": "your_key_from_virustotal.com",
-  "honeypot_ports": [2222, 8080, 2121],
-  "alert_threshold": 75,
-  "analyst_name": "Your Name"
-}
+```bash
+cp config.sample.json config.json
+# Edit config.json and add your API keys:
+# - abuseipdb_key: Get free key at https://www.abuseipdb.com/api
+# - virustotal_key: Get free key at https://www.virustotal.com/gui/join-us
 ```
 
-**Without API keys** — falls back to realistic simulated intel using the built-in IOC database. Everything works.
+---
+
+## 🏗️ Architecture
+
+```
+┌─────────────────────────────────────────────┐
+│              CyberCommandCenter              │
+├──────────┬──────────┬───────────┬───────────┤
+│  Threat  │ Anomaly  │    APT    │ Honeypot  │
+│  Intel   │ Detector │ Simulator │           │
+│  Engine  │ (ML/IsoF)│ (MITRE)  │ (TCP/Multi│
+│          │          │           │  service) │
+├──────────┴──────────┴───────────┴───────────┤
+│         SOC Dashboard (Rich Terminal UI)     │
+├─────────────────────────────────────────────┤
+│   IOC Scanner │ Report Generator │ CLI Args  │
+└─────────────────────────────────────────────┘
+```
 
 ---
 
-## 🛡 IOC Database (Built-in)
+## 📊 Sample Output
 
-Pre-loaded with known malicious indicators:
-- **IPs** — Shodan crawlers, known C2 infrastructure, Tor exit nodes
-- **Domains** — C2 domains, phishing kits, ransomware payment pages  
-- **Hashes** — Known malware file hashes
-- **User-Agents** — Masscan, ZGrab, Go scrapers, malicious crawlers
+```
+╔══════════════════════════════════════════════╗
+║  🛡️  CYBER COMMAND CENTER  |  SOC DASHBOARD  ║
+╠══════════════════════════════════════════════╣
+║  Threats Detected: 7   Anomalies: 3          ║
+║  Intel Lookups: 142    IOCs Blocked: 29      ║
+╠══════════════════════════════════════════════╣
+║  [CRITICAL] 185.220.101.45 — TOR exit node  ║
+║  [HIGH]     Brute force: 847 attempts/min    ║
+║  [MEDIUM]   Lateral movement: SMB detected   ║
+╚══════════════════════════════════════════════╝
+```
 
 ---
 
-## 📦 Dependencies
+## 🤝 Contributing
 
-| Package | Purpose | Required? |
-|---------|---------|-----------|
-| `rich` | Beautiful terminal dashboard UI | Optional (falls back to plain text) |
-| `scikit-learn` | Isolation Forest ML model | Optional (falls back to Z-score) |
-| `numpy` | Array operations for ML | Optional (with sklearn) |
-| *stdlib only* | Everything else | ✅ Always works |
+PRs welcome! Open an issue first for major changes.
 
 ---
 
 ## 👤 Author
 
-**S. Srinivasan** — SOC & NOC Analyst · Chennai, India  
-[LinkedIn](https://linkedin.com/in/srinivasan132) · [GitHub](https://github.com/SRINIVASAN55)
-
-> *"The best SIEM is the one you built yourself."*
+**S. Srinivasan** — Security Researcher & Developer
+- GitHub: [@SRINIVASAN55](https://github.com/SRINIVASAN55)
+- LinkedIn: [srinivasan132](https://linkedin.com/in/srinivasan132)
 
 ---
 
 <div align="center">
-<sub>MITRE ATT&CK® is a registered trademark of The MITRE Corporation. This project is for educational and defensive security research purposes.</sub>
+
+⭐ **Star this repo if you find it useful!** ⭐
+
+*Built with ❤️ for the blue team community*
+
 </div>
