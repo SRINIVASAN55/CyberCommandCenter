@@ -1,0 +1,8 @@
+# CyberCommandCenter — Optional dependencies
+# Core runs on Python 3.8+ stdlib only
+# Install these for full features:
+
+rich>=13.0.0          # Beautiful terminal dashboard (highly recommended)
+scikit-learn>=1.0.0   # ML Isolation Forest anomaly detection
+numpy>=1.21.0         # Required by scikit-learn
+requests>=2.28.0      # Optional: used only if you extend the API module
