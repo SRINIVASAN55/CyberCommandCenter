@@ -1,12 +1,10 @@
 {
-  "abuseipdb_key": "YOUR_ABUSEIPDB_KEY_HERE",
-  "virustotal_key": "YOUR_VIRUSTOTAL_KEY_HERE",
-  "honeypot_ports": [
-    2222,
-    8080,
-    2121
-  ],
+  "abuseipdb_key": "YOUR_ABUSEIPDB_API_KEY_HERE",
+  "virustotal_key": "YOUR_VIRUSTOTAL_API_KEY_HERE",
+  "honeypot_ports": [22, 80, 21, 443, 8080],
   "alert_threshold": 75,
-  "output_dir": "incidents",
-  "analyst_name": "S. Srinivasan"
+  "analyst_name": "SOC Analyst",
+  "log_level": "INFO",
+  "output_dir": "./reports",
+  "max_cache_size": 1000
 }
