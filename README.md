@@ -1,5 +1,9 @@
 # CyberCommandCenter
 
+![CI](https://github.com/SRINIVASAN55/CyberCommandCenter/actions/workflows/ci.yml/badge.svg) ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg) ![Python](https://img.shields.io/badge/python-3.8+-blue.svg)
+
+
+
 > One file. No cloud. Full SOC.
 
 A self-contained security operations platform that runs entirely from a single Python script — no mandatory pip installs, no SaaS accounts, no configuration required to start. Pop it on any machine and you have a working SOC in 10 seconds.
