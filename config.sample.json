@@ -1,0 +1,12 @@
+{
+  "abuseipdb_key": "YOUR_ABUSEIPDB_KEY_HERE",
+  "virustotal_key": "YOUR_VIRUSTOTAL_KEY_HERE",
+  "honeypot_ports": [
+    2222,
+    8080,
+    2121
+  ],
+  "alert_threshold": 75,
+  "output_dir": "incidents",
+  "analyst_name": "S. Srinivasan"
+}
